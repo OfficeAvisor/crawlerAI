@@ -1,0 +1,15 @@
+Datum/Zeit: 9.8.2025, 00:10:25
+IP: ::1
+Domain: tsavco.de
+Score: 65
+Zeichen untersucht: 120370
+Token-Verbrauch: 2054
+Geschätzte Kosten (USD): $0.001027
+
+Empfehlungen:
+**Score:** 65/100
+### Analyse:
+Die Website tsavco.de scheint sich auf Bauausführungen und Sanierungen zu konzentrieren. Der Titel ist präzise und gibt einen klaren Hinweis auf den Inhalt der Seite. Die Seite verwendet grundlegende HTML-Strukturen und einige relevante Meta-Tags, einschließlich der für SEO wichtigen „robots“-Meta-Angabe. Die Verwendung von RSS-Feeds ist ebenfalls positiv zu bewerten. Jedoch fehlen einige wesentliche Inhalte, die für eine bessere Benutzererfahrung und SEO-Optimierung wichtig sind.
+
+Fragebogen-Antworten:
+Keine Antworten übergeben

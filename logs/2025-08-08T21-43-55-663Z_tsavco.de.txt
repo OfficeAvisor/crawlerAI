@@ -1,0 +1,16 @@
+Datum/Zeit: 9.8.2025, 00:43:55
+IP: ::1
+Domain: tsavco.de
+Score: 75
+Zeichen untersucht (original): 120370
+Zeichen an GPT gesendet: 50000
+Token-Verbrauch: 15580
+Geschätzte Kosten (USD): $0.007790
+
+Empfehlungen:
+**Score: 75/100**
+### Inhaltsanalyse
+Die Webseite "tsavco.de" hat einige Stärken, darunter eine klare Struktur, ein ansprechendes Design und relevante Informationen über Bauausführungen und Sanierungen. Sie verwendet Elementor zur Gestaltung von Inhalten, was eine modulare und anpassbare Webseitenstruktur ermöglicht. Die Verwendung von Videos und Bildern trägt dazu bei, das Nutzererlebnis zu verbessern. Es gibt jedoch auch Bereiche, die verbessert werden können, um die Benutzerfreundlichkeit und Suchmaschinenoptimierung zu erhöhen.
+
+Fragebogen-Antworten:
+Keine Antworten

@@ -1,0 +1,19 @@
+Datum/Zeit: 14.8.2025, 11:57:13
+IP: ::1
+Domain: tsavco.de
+SCORE: 65
+Zeichen untersucht (original): 120517
+Zeichen an GPT gesendet: 50000
+Token-Verbrauch: 15668
+Geschätzte Kosten (USD): $0.007834
+
+Empfehlungen:
+- Implementiere JSON-LD für LocalBusiness mit klaren Entitäten und Kontaktinformationen.
+- Erstelle prägnante, zitierfähige Antworten für jede Dienstleistung und Region.
+- Erlaube gezielt KI-Crawler wie GPTBot und PerplexityBot den Zugriff auf die Seite.
+
+Fragebogen-Antworten:
+{"email":"officeavisor@gmail.com","siteType":"Lokaler Service/Handwerk","audience":"Geschäftskunden","mainGoal":"Anfragen erhalten","updateFrequency":"Seltener","aiContentUsage":"Nein"}
+
+Branch-Instruktion:
+Lokaler Service: KIs bevorzugen eindeutige Anbieter-Antworten. Erstelle pro Leistung + Gebiet eine kurze Antwort (80–120 Wörter) mit Name, Standort, Einsatzgebiet, Angebotsumfang und Kontakt. JSON‑LD: LocalBusiness mit address/geo/areaServed/telephone + FAQPage für typische Fragen. Sichtbare Kundenstimmen im Text. GPTBot/PerplexityBot explizit erlauben.

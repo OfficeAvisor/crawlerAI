@@ -1,0 +1,16 @@
+Datum/Zeit: 9.8.2025, 01:16:25
+IP: ::1
+Domain: tsavco.de
+Score: 1
+Zeichen untersucht (original): 120370
+Zeichen an GPT gesendet: 50000
+Token-Verbrauch: 15660
+Geschätzte Kosten (USD): $0.007830
+
+Empfehlungen:
+Auf Basis der angegebenen Metadaten und des analysierten Inhalts der Website tsavco.de, hier einige spezifische Verbesserungsvorschläge:
+### Verbesserungsvorschläge:
+1. **Suchmaschinenoptimierung (SEO) aktivieren**: Da die aktuelle Konfiguration für SEO nicht aktiviert ist, wird empfohlen, eine effektive SEO-Strategie zu implementieren. Das umfasst:
+
+Fragebogen-Antworten:
+{"type":["Unternehmens- oder Portfolioseite"],"goal":["Leads / Kontaktanfragen"],"audience":["Unternehmen (B2B)"],"frequency":"Seltener","seo":"Nein, noch nicht"}

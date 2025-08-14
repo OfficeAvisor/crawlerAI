@@ -1,0 +1,15 @@
+Datum/Zeit: 9.8.2025, 00:19:53
+IP: ::1
+Domain: tsavco.de
+Score: 75
+Zeichen untersucht: 120370
+Token-Verbrauch: 15564
+Geschätzte Kosten (USD): $0.007782
+
+Empfehlungen:
+**Website Score:** 75/100
+### Analyse:
+Die Website tsavco.de hebt sich durch eine ansprechende visuelle Gestaltung und eine klare Handlungsaufforderung ab. Der Einsatz von Elementor ermöglicht eine erfolgreiche Strukturierung der Inhalte, was die Benutzerfreundlichkeit verbessert. Es gibt jedoch einige Bereiche, in denen Optimierungspotenzial besteht.
+
+Fragebogen-Antworten:
+Keine Antworten

@@ -1,0 +1,16 @@
+Datum/Zeit: 9.8.2025, 01:11:52
+IP: ::1
+Domain: tsavco.de
+Score: 1
+Zeichen untersucht (original): 120370
+Zeichen an GPT gesendet: 50000
+Token-Verbrauch: 15614
+Geschätzte Kosten (USD): $0.007807
+
+Empfehlungen:
+**Website Analyse und Verbesserungsvorschläge für tsavco.de**
+### Analyse des Inhalts
+1. **Titel und Meta-Daten**:
+
+Fragebogen-Antworten:
+{}

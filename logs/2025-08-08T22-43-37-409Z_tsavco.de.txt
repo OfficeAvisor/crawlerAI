@@ -1,0 +1,18 @@
+Datum/Zeit: 9.8.2025, 01:43:37
+IP: ::1
+Domain: tsavco.de
+Zeichen untersucht (original): 120370
+Zeichen an GPT gesendet: 50000
+Token-Verbrauch: 15783
+Geschätzte Kosten (USD): $0.007891
+
+Empfehlungen:
+Um die Sichtbarkeit der Webseite in KI-Antworten zu erhöhen, empfehle ich folgende drei präzise Maßnahmen:
+1. **Implementierung von strukturierten Daten (JSON-LD)**:
+   Fügen Sie ein `LocalBusiness`-Schema hinzu, das wichtige Informationen wie den Namen, die Adresse, die Telefonnummer und das Servicegebiet der Tsav Co GmbH strukturiert darstellt. Ergänzen Sie auch ein `FAQPage`-Schema, um häufig gestellte Fragen klar zu kennzeichnen. Beispiel:
+
+Fragebogen-Antworten:
+{"email":"officeavisor@gmail.com","siteType":"Lokaler Service/Handwerk","audience":"Geschäftskunden","mainGoal":"Anfragen erhalten","updateFrequency":"Seltener","aiContentUsage":"Nein"}
+
+Branch-Instruktion:
+Die Seite ist ein lokaler Service. Fokussiere auf LocalBusiness-Schema (Name, Adresse, Telefonnummer, Servicegebiet), FAQPage für häufige Fragen und aktuelle Kundenbewertungen. Erlaube GPTBot und PerplexityBot den Zugriff.

@@ -1,0 +1,19 @@
+Datum/Zeit: 11.8.2025, 00:54:09
+IP: ::1
+Domain: tsavco.de
+SCORE: 45
+Zeichen untersucht (original): 120370
+Zeichen an GPT gesendet: 50000
+Token-Verbrauch: 15556
+Geschätzte Kosten (USD): $0.007778
+
+Empfehlungen:
+- Implementiere regelmäßig aktualisierte Blogbeiträge zu branchenspezifischen Themen.
+- Optimiere die Website für lokale Suchanfragen mit gezielten Keywords.
+- Fördere Kundenbewertungen aktiv und integriere sie in den Content.
+
+Fragebogen-Antworten:
+{"email":"","siteType":"Lokaler Service/Handwerk","audience":"Geschäftskunden","mainGoal":"Anfragen erhalten","updateFrequency":"Seltener","aiContentUsage":"Nein"}
+
+Branch-Instruktion:
+Lokaler Service: LocalBusiness-Schema mit Name/Adresse/Telefon/geo/areaServed, FAQPage (Notdienst, Kosten), aktuelle Bewertungen im Markup, klare Service-Gebietsseiten. GPTBot/PerplexityBot erlauben.

@@ -1,0 +1,16 @@
+Datum/Zeit: 9.8.2025, 01:15:44
+IP: ::1
+Domain: tsavco.de
+Score: 1
+Zeichen untersucht (original): 120370
+Zeichen an GPT gesendet: 50000
+Token-Verbrauch: 15660
+Geschätzte Kosten (USD): $0.007830
+
+Empfehlungen:
+Basierend auf den bereitgestellten Informationen und der Analyse des Inhalts der Website "tsavco.de", die als Unternehmens- oder Portfolioseite mit dem Ziel von Leads und Kontaktanfragen dient, empfehle ich folgende Verbesserungen:
+### 1. **SEO-Optimierung**
+- **Metadaten:** Da die Website derzeit kein SEO hat, sollten aussagekräftige Titel-Tags und Beschreibungen für jede Seite erstellt werden. Diese sollten relevante Keywords für die Bausanierungs- und Bauausführungsbranche enthalten.
+
+Fragebogen-Antworten:
+{"type":["Unternehmens- oder Portfolioseite"],"goal":["Leads / Kontaktanfragen"],"audience":["Unternehmen (B2B)"],"frequency":"Seltener","seo":"Nein, noch nicht"}

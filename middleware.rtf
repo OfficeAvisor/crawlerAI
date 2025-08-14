@@ -1,0 +1,46 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2821
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 // middleware.ts\
+import \{ NextResponse \} from "next/server";\
+\
+export function middleware() \{\
+  const res = NextResponse.next();\
+\
+  // Basis-Schutz\
+  res.headers.set("X-Frame-Options", "DENY");\
+  res.headers.set("X-Content-Type-Options", "nosniff");\
+  res.headers.set("Referrer-Policy", "no-referrer");\
+  res.headers.set("Permissions-Policy", "geolocation=()");\
+\
+  // CSP \'96 in DEV lockern wir connect-src f\'fcr HMR (WebSocket)\
+  const isDev = process.env.NODE_ENV !== "production";\
+  const connectSrc = [\
+    "'self'",\
+    "https://api.openai.com",\
+    ...(isDev ? ["ws:", "http://localhost:*"] : []),\
+  ].join(" ");\
+\
+  res.headers.set(\
+    "Content-Security-Policy",\
+    [\
+      "default-src 'self'",\
+      "img-src 'self' data:",\
+      "style-src 'self' 'unsafe-inline'",\
+      "script-src 'self'",\
+      `connect-src $\{connectSrc\}`,\
+      "frame-ancestors 'none'",\
+      "base-uri 'self'",\
+      "form-action 'self'",\
+    ].join("; ")\
+  );\
+\
+  return res;\
+\}\
+\
+// optional: Wenn du die Middleware nur auf bestimmte Pfade willst, hier anpassen.\
+// export const config = \{ matcher: ["/((?!_next|favicon.ico).*)"] \};}
