@@ -1,25 +1,26 @@
 "use client";
 import { useState } from "react";
+import type { FormEvent, ChangeEvent } from "react";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
-  const [domain, setDomain] = useState("");
-  const [err, setErr] = useState("");
+  const [domain, setDomain] = useState<string>("");
+  const [err, setErr] = useState<string>("");
   const router = useRouter();
 
-  function normalize(input) {
+  function normalize(input: string): string {
     let d = input.trim();
     if (!d) return "";
     if (!/^https?:\/\//i.test(d)) d = "https://" + d;
     try {
-      const u = new URL(d);
-      return u.hostname; // nur Hostname
+      const { hostname } = new URL(d);
+      return hostname.replace(/^www\./, "");
     } catch {
       return "";
     }
   }
 
-  function handleSubmit(e) {
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const host = normalize(domain);
     if (!host) {
@@ -46,37 +47,32 @@ export default function Home() {
         color: "white",
       }}
     >
-      {/* Titel */}
       <h1 style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "0.5rem" }}>
         Mache unsichtbaren KI-Traffic sichtbar
       </h1>
 
-      {/* Untertitel */}
       <p style={{ maxWidth: "600px", lineHeight: "1.4", marginBottom: "1rem", color: "#ccc" }}>
         CrawlerAI erkennt, wie, wann und wo KI-Systeme wie ChatGPT, Perplexity oder Claude
         deine Inhalte nutzen – und zeigt dir, wie du diesen Traffic zurückholst oder
         monetarisierst.
       </p>
 
-      {/* Nutzenpunkte */}
       <ul style={{ listStyle: "none", padding: 0, marginBottom: "1rem", color: "#aaa" }}>
         <li>✅ Finde heraus, ob KI-Tools deine Inhalte verwenden</li>
         <li>✅ Sieh, wie gut deine Seite auf KI-Traffic vorbereitet ist</li>
         <li>✅ Erhalte einen individuellen KI-Score und konkrete Handlungsempfehlungen</li>
       </ul>
 
-      {/* Call-to-Action */}
       <h3 style={{ marginTop: "1rem", marginBottom: "0.5rem" }}>
         Teste jetzt deine Website – kostenlos & ohne Anmeldung
       </h3>
 
-      {/* Eingabefeld */}
       <form onSubmit={handleSubmit} style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
         <input
           type="text"
           placeholder="z. B. example.com"
           value={domain}
-          onChange={(e) => setDomain(e.target.value)}
+          onChange={(e: ChangeEvent<HTMLInputElement>) => setDomain(e.target.value)}
           style={{
             padding: "0.6rem 0.8rem",
             minWidth: "260px",
