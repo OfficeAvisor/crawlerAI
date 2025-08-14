@@ -1,15 +1,15 @@
 "use client";
-import { useState } from "react";
+import React, { useState } from "react";
 import type { FormEvent, ChangeEvent } from "react";
 import { useRouter } from "next/navigation";
 
-export default function Home() {
+export default function Home(): JSX.Element {
   const [domain, setDomain] = useState<string>("");
   const [err, setErr] = useState<string>("");
   const router = useRouter();
 
   function normalize(input: string): string {
-    let d = input.trim();
+    let d: string = input.trim();
     if (!d) return "";
     if (!/^https?:\/\//i.test(d)) d = "https://" + d;
     try {
@@ -20,15 +20,19 @@ export default function Home() {
     }
   }
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  function handleSubmit(e: FormEvent<HTMLFormElement>): void {
     e.preventDefault();
-    const host = normalize(domain);
+    const host: string = normalize(domain);
     if (!host) {
       setErr("Bitte eine gültige Webadresse eingeben (z. B. example.com).");
       return;
     }
     setErr("");
     router.push(`/fragebogen?domain=${encodeURIComponent(host)}`);
+  }
+
+  function handleChange(e: ChangeEvent<HTMLInputElement>): void {
+    setDomain(e.target.value);
   }
 
   return (
@@ -48,19 +52,19 @@ export default function Home() {
       }}
     >
       <h1 style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "0.5rem" }}>
-        Mache unsichtbaren KI-Traffic sichtbar
+        Mache unsichtbaren KI‑Traffic sichtbar
       </h1>
 
       <p style={{ maxWidth: "600px", lineHeight: "1.4", marginBottom: "1rem", color: "#ccc" }}>
-        CrawlerAI erkennt, wie, wann und wo KI-Systeme wie ChatGPT, Perplexity oder Claude
+        CrawlerAI erkennt, wie, wann und wo KI‑Systeme wie ChatGPT, Perplexity oder Claude
         deine Inhalte nutzen – und zeigt dir, wie du diesen Traffic zurückholst oder
         monetarisierst.
       </p>
 
       <ul style={{ listStyle: "none", padding: 0, marginBottom: "1rem", color: "#aaa" }}>
-        <li>✅ Finde heraus, ob KI-Tools deine Inhalte verwenden</li>
-        <li>✅ Sieh, wie gut deine Seite auf KI-Traffic vorbereitet ist</li>
-        <li>✅ Erhalte einen individuellen KI-Score und konkrete Handlungsempfehlungen</li>
+        <li>✅ Finde heraus, ob KI‑Tools deine Inhalte verwenden</li>
+        <li>✅ Sieh, wie gut deine Seite auf KI‑Traffic vorbereitet ist</li>
+        <li>✅ Erhalte einen individuellen KI‑Score und konkrete Handlungsempfehlungen</li>
       </ul>
 
       <h3 style={{ marginTop: "1rem", marginBottom: "0.5rem" }}>
@@ -72,7 +76,7 @@ export default function Home() {
           type="text"
           placeholder="z. B. example.com"
           value={domain}
-          onChange={(e: ChangeEvent<HTMLInputElement>) => setDomain(e.target.value)}
+          onChange={handleChange}
           style={{
             padding: "0.6rem 0.8rem",
             minWidth: "260px",
