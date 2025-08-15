@@ -1,8 +1,10 @@
-"use client";
-import { useRouter, useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import { useState } from "react";
 
-export default function FragebogenPage() {
+function FragebogenInner() {
+  "use client";
+  const { useRouter, useSearchParams } = require("next/navigation");
+
   const router = useRouter();
   const searchParams = useSearchParams();
   const domain = searchParams.get("domain") || "";
@@ -143,5 +145,13 @@ export default function FragebogenPage() {
         </button>
       </form>
     </main>
+  );
+}
+
+export default function FragebogenPage() {
+  return (
+    <Suspense fallback={<div style={{ color: '#fff', background: '#000', minHeight: '100svh', display: 'grid', placeItems: 'center' }}>Bitte warten…</div>}>
+      <FragebogenInner />
+    </Suspense>
   );
 }
