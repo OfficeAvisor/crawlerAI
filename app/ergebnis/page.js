@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { useEffect, useState } from "react";
 
-function ErgebnisInner() {
+function ErgebnisWrapper() {
   "use client";
   const { useSearchParams } = require("next/navigation");
   const searchParams = useSearchParams();
@@ -12,7 +12,7 @@ function ErgebnisInner() {
   const [notes, setNotes] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
-//test
+
   useEffect(() => {
     if (!domain) {
       setError("Domain fehlt.");
@@ -120,7 +120,7 @@ function ErgebnisInner() {
 export default function ErgebnisPage() {
   return (
     <Suspense fallback={<div>Bitte warten…</div>}>
-      <ErgebnisInner />
+      <ErgebnisWrapper />
     </Suspense>
   );
 }
