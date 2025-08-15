@@ -1,8 +1,9 @@
-"use client";
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
-export default function ErgebnisPage() {
+function ErgebnisInner() {
+  "use client";
   const searchParams = useSearchParams();
   const domain = searchParams.get("domain") || "";
   const answers = searchParams.get("answers") || "{}";
@@ -11,7 +12,7 @@ export default function ErgebnisPage() {
   const [notes, setNotes] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
-
+//test 
   useEffect(() => {
     if (!domain) {
       setError("Domain fehlt.");
@@ -113,5 +114,13 @@ export default function ErgebnisPage() {
         )}
       </div>
     </main>
+  );
+}
+
+export default function ErgebnisPage() {
+  return (
+    <Suspense fallback={<div>Bitte warten…</div>}>
+      <ErgebnisInner />
+    </Suspense>
   );
 }
