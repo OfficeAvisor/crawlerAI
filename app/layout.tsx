@@ -36,17 +36,13 @@ export default function RootLayout({
         >
           <a
             href="/datenschutz"
-            style={{ color: "#fff", textDecoration: "none", marginRight: "1rem" }}
-            onMouseOver={e => (e.currentTarget.style.textDecoration = "underline")}
-            onMouseOut={e => (e.currentTarget.style.textDecoration = "none")}
+            style={{ color: "#fff", textDecoration: "underline", marginRight: "1rem" }}
           >
             Datenschutz
           </a>
           <a
             href="/impressum"
-            style={{ color: "#fff", textDecoration: "none" }}
-            onMouseOver={e => (e.currentTarget.style.textDecoration = "underline")}
-            onMouseOut={e => (e.currentTarget.style.textDecoration = "none")}
+            style={{ color: "#fff", textDecoration: "underline" }}
           >
             Impressum
           </a>
