@@ -1,10 +1,10 @@
+// @ts-nocheck
+"use client";
 import { Suspense } from "react";
 import { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 
 function FragebogenInner() {
-  "use client";
-  const { useRouter, useSearchParams } = require("next/navigation");
-
   const router = useRouter();
   const searchParams = useSearchParams();
   const domain = searchParams.get("domain") || "";
@@ -17,6 +17,7 @@ function FragebogenInner() {
     updateFrequency: "",
     aiContentUsage: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -26,6 +27,8 @@ function FragebogenInner() {
   };
 
   const handleSubmit = (e) => {
+    if (isSubmitting) return;
+    setIsSubmitting(true);
     e.preventDefault();
     const answersString = encodeURIComponent(JSON.stringify(formData));
     router.push(`/ergebnis?domain=${domain}&answers=${answersString}`);
@@ -131,6 +134,7 @@ function FragebogenInner() {
 
         <button
           type="submit"
+          disabled={isSubmitting}
           style={{
             padding: "0.75rem",
             background: "#ffcc00",
@@ -138,10 +142,11 @@ function FragebogenInner() {
             fontWeight: "bold",
             border: "none",
             borderRadius: "4px",
-            cursor: "pointer",
+            cursor: isSubmitting ? "not-allowed" : "pointer",
+            opacity: isSubmitting ? 0.6 : 1,
           }}
         >
-          Analyse starten
+          {isSubmitting ? "Wird gesendet…" : "Analyse starten"}
         </button>
       </form>
     </main>

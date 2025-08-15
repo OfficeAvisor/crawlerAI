@@ -1,9 +1,10 @@
-import { Suspense } from "react";
-import { useEffect, useState } from "react";
+// @ts-nocheck
+'use client';
+import { Suspense, useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
+
 
 function ErgebnisWrapper() {
-  "use client";
-  const { useSearchParams } = require("next/navigation");
   const searchParams = useSearchParams();
   const domain = searchParams.get("domain") || "";
   const answers = searchParams.get("answers") || "{}";

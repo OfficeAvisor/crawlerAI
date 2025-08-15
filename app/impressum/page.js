@@ -45,8 +45,8 @@ export default function ImpressumPage() {
         <h2 style={h2}>Kontakt</h2>
         <p>
           Telefon: [Telefonnummer]<br />
-          E‑Mail: <a href="mailto:[email]" style={link}>[email]</a><br />
-          Website: <a href="https://[domain]" style={link}>https://[domain]</a>
+          E‑Mail: <a href="mailto:[email]" style={link}>[officeavisor@gmail.com]</a><br />
+          Website: <a href="https://[domain]" style={link}>https://[n.A.]</a>
         </p>
 
         {/* Registerangaben – falls vorhanden */}
