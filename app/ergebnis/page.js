@@ -1,9 +1,9 @@
 import { Suspense } from "react";
-import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 function ErgebnisInner() {
   "use client";
+  const { useSearchParams } = require("next/navigation");
   const searchParams = useSearchParams();
   const domain = searchParams.get("domain") || "";
   const answers = searchParams.get("answers") || "{}";
@@ -12,7 +12,7 @@ function ErgebnisInner() {
   const [notes, setNotes] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
-//test 
+//test
   useEffect(() => {
     if (!domain) {
       setError("Domain fehlt.");
