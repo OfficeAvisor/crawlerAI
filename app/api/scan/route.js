@@ -165,9 +165,10 @@ export async function POST(req) {
       .filter((l) => l.startsWith("-"))
       .slice(0, 3);
 
-    const logFolder = path.join(process.cwd(), "logs");
-    if (!fs.existsSync(logFolder)) fs.mkdirSync(logFolder);
-
+  //const logFolder = path.join(process.cwd(), "logs");
+    //if (!fs.existsSync(logFolder)) fs.mkdirSync(logFolder);
+    const logFolder = "/tmp"; // Vercel: /tmp ist beschreibbar
+    // if (!fs.existsSync(logFolder)) fs.mkdirSync(logFolder);
     const nowLog = new Date();
     const fileName = `${nowLog.toISOString().replace(/[:.]/g, "-")}_${domain}.txt`;
     const logPath = path.join(logFolder, fileName);
