@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import type { FormEvent, ChangeEvent } from "react";
 import { useRouter } from "next/navigation";
 
-export default function Home(): JSX.Element {
+export default function Home() {
   const [domain, setDomain] = useState<string>("");
   const [err, setErr] = useState<string>("");
   const router = useRouter();
