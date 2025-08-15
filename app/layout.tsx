@@ -17,13 +17,40 @@ export default function RootLayout({
     <html lang="de">
       <body
         style={{
+          display: "flex",
+          flexDirection: "column",
           minHeight: "100svh",
           background: "#000",
           color: "#fff",
           margin: 0,
         }}
       >
-        {children}
+        <main style={{ flex: 1 }}>{children}</main>
+        <footer
+          style={{
+            backgroundColor: "#000",
+            color: "#fff",
+            textAlign: "center",
+            padding: "1rem 0",
+          }}
+        >
+          <a
+            href="/datenschutz"
+            style={{ color: "#fff", textDecoration: "none", marginRight: "1rem" }}
+            onMouseOver={e => (e.currentTarget.style.textDecoration = "underline")}
+            onMouseOut={e => (e.currentTarget.style.textDecoration = "none")}
+          >
+            Datenschutz
+          </a>
+          <a
+            href="/impressum"
+            style={{ color: "#fff", textDecoration: "none" }}
+            onMouseOver={e => (e.currentTarget.style.textDecoration = "underline")}
+            onMouseOut={e => (e.currentTarget.style.textDecoration = "none")}
+          >
+            Impressum
+          </a>
+        </footer>
       </body>
     </html>
   );
