@@ -15,7 +15,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de">
-      <body>{children}</body>
+      <body
+        style={{
+          minHeight: "100svh",
+          background: "#000",
+          color: "#fff",
+          margin: 0,
+        }}
+      >
+        {children}
+      </body>
     </html>
   );
 }
